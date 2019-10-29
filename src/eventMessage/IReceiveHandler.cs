@@ -1,7 +1,17 @@
+using System.Collections.Generic;
+
 namespace eventMessage
 { 
-    public interface IReceiveHandler 
+    public interface IReceiveHandler<in T>
     {
-        void Oneceive (byte[] buffer);
+        void OnReceive(T buffer);
+    }
+
+    public interface IPullHandler : IReceiveHandler<byte[]>
+    {
+    }
+
+    public interface ISubscribeHandler : IReceiveHandler<List<byte[]>>
+    {
     }
 }
