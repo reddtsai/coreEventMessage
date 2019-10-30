@@ -1,13 +1,13 @@
 using NetMQ;
 using NetMQ.Sockets;
+using System;
 
 namespace eventMessage 
 {
-    public interface IMessagePublisher 
+    public interface IMessagePublisher : IDisposable
     {
-        void Send (string topic, string message);
-        void Send (byte[] topic, byte[] message);
-        void Close ();
+        void Send(byte[] topic, byte[] message);
+        void Close();
     }
 
     public class MessagePublisher : IMessagePublisher 
@@ -15,14 +15,14 @@ namespace eventMessage
         PublisherSocket _publisher;
 
         /// <summary>
-        /// create a NetMQ publisher socket
+        /// create a socket server to publish message
         /// </summary>
         /// <param name="port">socket port</param>
-        public MessagePublisher (int port) 
+        public MessagePublisher(int port) 
         {
-            _publisher = new PublisherSocket ();
+            _publisher = new PublisherSocket();
             _publisher.Options.SendHighWatermark = 1000;
-            _publisher.Bind ($"tcp://*:{port}");
+            _publisher.Bind($"tcp://*:{port}");
         }
 
         /// <summary>
@@ -30,9 +30,9 @@ namespace eventMessage
         /// </summary>
         /// <param name="topic">topic</param>
         /// <param name="message">message</param>
-        public void Send (string topic, string message) 
+        public void Send(string topic, string message) 
         {
-            _publisher.SendMoreFrame (topic).SendFrame (message);
+            _publisher.SendMoreFrame(topic).SendFrame(message);
         }
 
         /// <summary>
@@ -40,17 +40,23 @@ namespace eventMessage
         /// </summary>
         /// <param name="topic">topic</param>
         /// <param name="message">message</param>
-        public void Send (byte[] topic, byte[] message) 
+        public void Send(byte[] topic, byte[] message) 
         {
-            _publisher.SendMoreFrame (topic).SendFrame (message);
+            _publisher.SendMoreFrame(topic).SendFrame(message);
         }
 
         /// <summary>
-        /// close NetMQ publisher socket
+        /// close socket
         /// </summary>
-        public void Close () 
+        public void Close() 
         {
-            _publisher.Close ();
+            _publisher.Close();
+        }
+
+        public void Dispose()
+        {
+            Close();
+            GC.SuppressFinalize(this);
         }
     }
 }
