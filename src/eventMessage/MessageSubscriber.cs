@@ -72,7 +72,7 @@ namespace eventMessage
 
             _cancellationTokenSource = new CancellationTokenSource();
             var cancelToken = _cancellationTokenSource.Token;
-            var task = Task.Factory.StartNew(
+            _receiveTask = Task.Factory.StartNew(
                 (t) => Receive(t),
                 cancelToken,
                 cancelToken);
