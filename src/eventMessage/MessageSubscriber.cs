@@ -1,6 +1,7 @@
 using NetMQ;
 using NetMQ.Sockets;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -72,20 +73,23 @@ namespace eventMessage
 
             _cancellationTokenSource = new CancellationTokenSource();
             var cancelToken = _cancellationTokenSource.Token;
-            var task = Task.Factory.StartNew(
-                (t) => Receive(t),
-                cancelToken,
+            _receiveTask = Task.Factory.StartNew(
+                Receive,
                 cancelToken);
         }
 
-        private void Receive(object o) 
+        private void Receive() 
         {
-            var ct = (CancellationToken)o;
-
+            var ct = _cancellationTokenSource.Token;
+            //var ts = TimeSpan.FromSeconds(5);
+            List<byte[]> buf = new List<byte[]>(2);
+            
             while(!ct.IsCancellationRequested)
             {
-                var messageBuf = _Subscriber.ReceiveMultipartBytes(2);
-                _subscribeHandler.OnReceive(messageBuf);
+                if(_Subscriber.TryReceiveMultipartBytes(ref buf, 2))
+                {
+                    _subscribeHandler.OnReceive(buf);
+                }
             }
         }
 
@@ -94,8 +98,8 @@ namespace eventMessage
         /// </summary>
         public void Close()
         {
-            _cancellationTokenSource.Cancel();
-            _receiveTask.Wait();
+            _cancellationTokenSource?.Cancel();
+            _receiveTask?.Wait();
             _Subscriber.Close();
         }
 

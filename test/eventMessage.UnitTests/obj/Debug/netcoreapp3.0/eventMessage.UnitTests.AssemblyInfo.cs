@@ -7,10 +7,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("eventMessage")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("eventMessage.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("eventMessage")]
-[assembly: System.Reflection.AssemblyTitleAttribute("eventMessage")]
+[assembly: System.Reflection.AssemblyProductAttribute("eventMessage.UnitTests")]
+[assembly: System.Reflection.AssemblyTitleAttribute("eventMessage.UnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
