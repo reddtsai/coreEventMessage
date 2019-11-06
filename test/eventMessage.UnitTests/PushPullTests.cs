@@ -4,31 +4,48 @@ using Xunit;
 
 namespace eventMessage.UnitTests
 {
-    public class PushPullTests : IClassFixture<PushPullFixture>
+    public class PushPullTests : IClassFixture<PullFixture>
     {        
-        PushPullFixture _fixture;
+        PullFixture _fixture;
 
-        public PushPullTests()
+        public PushPullTests(PullFixture fixture)
         {
-            _fixture = new PushPullFixture();
+            _fixture = fixture;
+        }
+
+        [Fact]
+        public void PushPull()
+        {
+            var pull = new MessagePuller(9100);
+            pull.SetReceiveHandleEvent(new TestPullHandler());
+            pull.Listen();
+
+            var Push = new MessagePusher("localhost", 9100);
+
+            pull.Close();
+            Push.Close();
         }
 
         [Fact]
         public void PushPullText()
         {      
-            _fixture.Push.Send(Encoding.UTF8.GetBytes("hello"));
-            Thread.Sleep(1000);
-            var test = _fixture.GetMessage();
-            Assert.Equal("hello", test);
+            using(var push = new MessagePusher("localhost", 9101))
+            {
+                push.Send(Encoding.UTF8.GetBytes("hello"));
+                Thread.Sleep(500);
+                Assert.Equal("hello", Encoding.UTF8.GetString(_fixture.GetBytes()));
+            }
         }
 
         [Fact]
         public void PushPullBytes()
         {      
-            _fixture.Push.Send(new byte[100]);
-            Thread.Sleep(1000);
-            var test = _fixture.GetLength();
-            Assert.Equal(100, test);
+            using(var push = new MessagePusher("localhost", 9101))
+            {
+                push.Send(new byte[100]);
+                Thread.Sleep(500);
+                Assert.Equal(100, _fixture.GetBytes().Length);
+            }
         }
     }
 }

@@ -1,0 +1,8 @@
+/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/bin/Debug/netstandard2.0/eventMessage.deps.json
+/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/bin/Debug/netstandard2.0/eventMessage.dll
+/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/bin/Debug/netstandard2.0/eventMessage.pdb
+/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/obj/Debug/netstandard2.0/eventMessage.csprojAssemblyReference.cache
+/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/obj/Debug/netstandard2.0/eventMessage.AssemblyInfoInputs.cache
+/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/obj/Debug/netstandard2.0/eventMessage.AssemblyInfo.cs
+/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/obj/Debug/netstandard2.0/eventMessage.dll
+/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/obj/Debug/netstandard2.0/eventMessage.pdb

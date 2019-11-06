@@ -35,6 +35,15 @@ namespace eventMessage
         }
 
         /// <summary>
+        /// push message
+        /// </summary>
+        /// <param name="message">message</param>
+        internal void Send(string message) 
+        {
+            _pusher.SendFrame(message);
+        }
+
+        /// <summary>
         /// close socket
         /// </summary>
         public void Close() 

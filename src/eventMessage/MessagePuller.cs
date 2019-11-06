@@ -52,19 +52,21 @@ namespace eventMessage
             _cancellationTokenSource = new CancellationTokenSource();
             var cancelToken = _cancellationTokenSource.Token;
             _receiveTask = Task.Factory.StartNew(
-                (t) => Receive(t),
-                cancelToken,
+                Receive,
                 cancelToken);
         }
 
-        private void Receive(object o) 
+        private void Receive() 
         {
-            var ct = (CancellationToken)o;
+            var ct = _cancellationTokenSource.Token;
+            byte[] buf;
 
             while(!ct.IsCancellationRequested)
             {
-                var messageBuf = _puller.ReceiveFrameBytes();
-                _pullHandler.OnReceive(messageBuf);
+                if(_puller.TryReceiveFrameBytes(out buf))
+                {
+                    _pullHandler.OnReceive(buf);
+                }
             }
         }
 
@@ -73,8 +75,8 @@ namespace eventMessage
         /// </summary>
         public void Close()
         {
-            _cancellationTokenSource.Cancel();
-            _receiveTask.Wait();
+            _cancellationTokenSource?.Cancel();        
+            _receiveTask?.Wait();
             _puller.Close();
         }
 
