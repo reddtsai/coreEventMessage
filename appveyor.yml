@@ -1,0 +1,7 @@
+version: 1.0.0.{build}
+skip_tags: true
+image: Visual Studio 2017
+configuration: Release
+build_script:
+  - dotnet restore eventMessage.sln
+  - dotnet build eventMessage.sln
