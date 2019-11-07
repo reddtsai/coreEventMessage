@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>ReddEventMessage</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>Redd.Tsai</Authors>
+    <Company>Redd</Company>
   </PropertyGroup>
 
   <ItemGroup>

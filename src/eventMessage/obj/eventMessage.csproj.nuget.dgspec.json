@@ -1,28 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/eventMessage.csproj": {}
+    "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\eventMessage.csproj": {}
   },
   "projects": {
-    "/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/eventMessage.csproj": {
-      "version": "1.0.0",
+    "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\eventMessage.csproj": {
+      "version": "1.0.1",
       "restore": {
-        "projectUniqueName": "/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/eventMessage.csproj",
-        "projectName": "eventMessage",
-        "projectPath": "/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/eventMessage.csproj",
-        "packagesPath": "/Users/reddtsai/.nuget/packages/",
-        "outputPath": "/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/obj/",
+        "projectUniqueName": "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\eventMessage.csproj",
+        "projectName": "ReddEventMessage",
+        "projectPath": "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\eventMessage.csproj",
+        "packagesPath": "C:\\Users\\Redd\\.nuget\\packages\\",
+        "outputPath": "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/reddtsai/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Redd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,7 +64,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

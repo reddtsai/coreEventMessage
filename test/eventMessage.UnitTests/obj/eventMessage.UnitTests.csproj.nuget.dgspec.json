@@ -1,28 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/reddtsai/Redd/dotnet/eventMessage/test/eventMessage.UnitTests/eventMessage.UnitTests.csproj": {}
+    "C:\\Redd\\dotnet\\eventMessage\\test\\eventMessage.UnitTests\\eventMessage.UnitTests.csproj": {}
   },
   "projects": {
-    "/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/eventMessage.csproj": {
+    "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\eventMessage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/eventMessage.csproj",
+        "projectUniqueName": "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\eventMessage.csproj",
         "projectName": "eventMessage",
-        "projectPath": "/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/eventMessage.csproj",
-        "packagesPath": "/Users/reddtsai/.nuget/packages/",
-        "outputPath": "/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/obj/",
+        "projectPath": "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\eventMessage.csproj",
+        "packagesPath": "C:\\Users\\Redd\\.nuget\\packages\\",
+        "outputPath": "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/reddtsai/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Redd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,36 +64,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/reddtsai/Redd/dotnet/eventMessage/test/eventMessage.UnitTests/eventMessage.UnitTests.csproj": {
+    "C:\\Redd\\dotnet\\eventMessage\\test\\eventMessage.UnitTests\\eventMessage.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/reddtsai/Redd/dotnet/eventMessage/test/eventMessage.UnitTests/eventMessage.UnitTests.csproj",
+        "projectUniqueName": "C:\\Redd\\dotnet\\eventMessage\\test\\eventMessage.UnitTests\\eventMessage.UnitTests.csproj",
         "projectName": "eventMessage.UnitTests",
-        "projectPath": "/Users/reddtsai/Redd/dotnet/eventMessage/test/eventMessage.UnitTests/eventMessage.UnitTests.csproj",
-        "packagesPath": "/Users/reddtsai/.nuget/packages/",
-        "outputPath": "/Users/reddtsai/Redd/dotnet/eventMessage/test/eventMessage.UnitTests/obj/",
+        "projectPath": "C:\\Redd\\dotnet\\eventMessage\\test\\eventMessage.UnitTests\\eventMessage.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\Redd\\.nuget\\packages\\",
+        "outputPath": "C:\\Redd\\dotnet\\eventMessage\\test\\eventMessage.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/reddtsai/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Redd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/eventMessage.csproj": {
-                "projectPath": "/Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/eventMessage.csproj"
+              "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\eventMessage.csproj": {
+                "projectPath": "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\eventMessage.csproj"
               }
             }
           }
@@ -135,7 +143,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

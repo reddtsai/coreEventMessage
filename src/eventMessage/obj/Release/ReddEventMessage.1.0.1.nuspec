@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ReddEventMessage</id>
+    <version>1.0.1</version>
+    <authors>Redd.Tsai</authors>
+    <owners>Redd.Tsai</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="NetMQ" version="4.0.0.207" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Redd\dotnet\eventMessage\src\eventMessage\bin\Release\netstandard2.0\eventMessage.dll" target="lib\netstandard2.0\eventMessage.dll" />
+  </files>
+</package>

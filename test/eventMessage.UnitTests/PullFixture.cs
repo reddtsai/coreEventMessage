@@ -3,7 +3,7 @@ using System;
 
 namespace eventMessage.UnitTests
 {
-    public class PullFixture : IDisposable
+    public class PullFixture : CleanupNetMQ
     {
         MessagePuller Pull;
         TestPullHandler Handler;
@@ -21,9 +21,10 @@ namespace eventMessage.UnitTests
             return Handler.Block;
         }
 
-        public void Dispose()
+        public override void Dispose() 
         {
             Pull.Close();
+            base.Dispose();
         }
     }
 }

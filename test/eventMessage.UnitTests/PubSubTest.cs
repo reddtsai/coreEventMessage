@@ -1,12 +1,21 @@
 using NetMQ;
+using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace eventMessage.UnitTests
 {
-    public class PubSubTest 
+    public class PubSubTest : IClassFixture<CleanupNetMQ>
     {
+        private readonly ITestOutputHelper _testOutputHelper;
+
+        public PubSubTest(ITestOutputHelper testOutputHelper)
+        {
+            _testOutputHelper = testOutputHelper;
+        }
+
         [Fact]
         public void PubSub()
         {
@@ -17,12 +26,12 @@ namespace eventMessage.UnitTests
         }
 
         [Theory]
-        [InlineData(9201, "topic", "message")]
-        [InlineData(9202, "redd", "hello")]
-        public void PubSubTopic(int port, string topic, string message)
+        [InlineData("topic", "message")]
+        [InlineData("redd", "hello")]
+        public void PubSubTopic(string topic, string message)
         {
-            using(var pub = new MessagePublisher(port))
-            using(var sub = new MessageSubscriber("localhost", port))
+            using(var pub = new MessagePublisher(9201))
+            using(var sub = new MessageSubscriber("localhost", 9201))
             {
                 var handler = new TestSubscribeHandler();
                 sub.SetReceiveHandleEvent(handler);
@@ -35,17 +44,14 @@ namespace eventMessage.UnitTests
                 
                 Assert.Equal(topic, Encoding.UTF8.GetString(handler.Block[0]));
                 Assert.Equal(message, Encoding.UTF8.GetString(handler.Block[1]));
-
-                pub.Close();
-                sub.Close();
             }
         }
 
         [Fact]
         public void Unsubscribe()
         {
-            using(var pub = new MessagePublisher(9203))
-            using(var sub = new MessageSubscriber("localhost", 9203))
+            using(var pub = new MessagePublisher(9202))
+            using(var sub = new MessageSubscriber("localhost", 9202))
             {
                 var handler = new TestSubscribeHandler();
                 sub.SetReceiveHandleEvent(handler);
