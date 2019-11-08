@@ -6,11 +6,3 @@
 /Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/obj/Debug/netstandard2.0/eventMessage.AssemblyInfo.cs
 /Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/obj/Debug/netstandard2.0/eventMessage.dll
 /Users/reddtsai/Redd/dotnet/eventMessage/src/eventMessage/obj/Debug/netstandard2.0/eventMessage.pdb
-C:\Redd\dotnet\eventMessage\src\eventMessage\bin\Debug\netstandard2.0\eventMessage.deps.json
-C:\Redd\dotnet\eventMessage\src\eventMessage\bin\Debug\netstandard2.0\eventMessage.dll
-C:\Redd\dotnet\eventMessage\src\eventMessage\bin\Debug\netstandard2.0\eventMessage.pdb
-C:\Redd\dotnet\eventMessage\src\eventMessage\obj\Debug\netstandard2.0\eventMessage.csprojAssemblyReference.cache
-C:\Redd\dotnet\eventMessage\src\eventMessage\obj\Debug\netstandard2.0\eventMessage.AssemblyInfoInputs.cache
-C:\Redd\dotnet\eventMessage\src\eventMessage\obj\Debug\netstandard2.0\eventMessage.AssemblyInfo.cs
-C:\Redd\dotnet\eventMessage\src\eventMessage\obj\Debug\netstandard2.0\eventMessage.dll
-C:\Redd\dotnet\eventMessage\src\eventMessage\obj\Debug\netstandard2.0\eventMessage.pdb

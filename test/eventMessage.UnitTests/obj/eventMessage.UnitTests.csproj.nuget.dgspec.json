@@ -5,10 +5,10 @@
   },
   "projects": {
     "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\eventMessage.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\eventMessage.csproj",
-        "projectName": "eventMessage",
+        "projectName": "ReddEventMessage",
         "projectPath": "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\eventMessage.csproj",
         "packagesPath": "C:\\Users\\Redd\\.nuget\\packages\\",
         "outputPath": "C:\\Redd\\dotnet\\eventMessage\\src\\eventMessage\\obj\\",

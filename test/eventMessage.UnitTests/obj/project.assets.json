@@ -2065,17 +2065,17 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "eventMessage/1.0.0": {
+      "ReddEventMessage/1.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "NetMQ": "4.0.0.207"
         },
         "compile": {
-          "bin/placeholder/eventMessage.dll": {}
+          "bin/placeholder/ReddEventMessage.dll": {}
         },
         "runtime": {
-          "bin/placeholder/eventMessage.dll": {}
+          "bin/placeholder/ReddEventMessage.dll": {}
         }
       }
     }
@@ -6839,7 +6839,7 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "eventMessage/1.0.0": {
+    "ReddEventMessage/1.0.1": {
       "type": "project",
       "path": "../../src/eventMessage/eventMessage.csproj",
       "msbuildProject": "../../src/eventMessage/eventMessage.csproj"
@@ -6848,8 +6848,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "Microsoft.NET.Test.Sdk >= 16.2.0",
+      "ReddEventMessage >= 1.0.1",
       "coverlet.collector >= 1.0.1",
-      "eventMessage >= 1.0.0",
       "xunit >= 2.4.0",
       "xunit.runner.visualstudio >= 2.4.0"
     ]
